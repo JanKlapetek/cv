@@ -45,12 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
     const icon = darkModeToggle.querySelector("i");
 
-    // Načti uložený režim z LocalStorage
+    // Načti režim z LocalStorage
     if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark-mode");
         icon.classList.replace("fa-moon", "fa-sun");
     }
 
+    // Přepínání režimu
     darkModeToggle.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
 
