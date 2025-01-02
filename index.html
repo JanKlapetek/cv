@@ -1,39 +1,39 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Osobní stránka</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Jan Klapetek</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <script src="{% static 'cv/script.js' %}" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <header>
-        <h1>Vítejte na mé osobní stránce</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">O mně</a></li>
-                <li><a href="#projects">Projekty</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h2>O mně</h2>
-            <p>Jsem nadšený programátor, který rád tvoří užitečné aplikace.</p>
-        </section>
-        <section id="projects">
-            <h2>Projekty</h2>
-            <p>Zde můžete vidět mé projekty.</p>
-        </section>
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Kontaktujte mě na e-mailu: <a href="mailto:priklad@email.cz">priklad@email.cz</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Moje Jméno. Všechna práva vyhrazena.</p>
-    </footer>
-    <script src="scripts/main.js"></script>
+    <div class="container">
+        <header>
+            <h1 class="animate__animated animate__flipInX">Jan Klapetek</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Domů</a></li>
+                    <li><a href="{% url 'about' %}">O mně</a></li>
+                    <li><a href="#/projects/">Projekty</a></li>
+                    <li><a href="{% url 'hearthstone' %}">Hearthstone</a></li>
+                    <li><a href="/admin">Admin</a></li>
+                    <li><a href="https://github.com/JanKlapetek?tab=repositories">Repositories GitHub</a></li>
+                    <li><a href="{% url 'kontakt' %}">Kontakt</a></li>
+                </ul>
+                <button id="darkModeToggle">🌙</button>
+            </nav>
+        </header>
+        
+        {% block content %}
+        <!-- Zde se bude načítat obsah z rozšiřujících šablon -->
+        {% endblock %}
+
+        <footer>
+            <p>&copy; <span id="current-year"></span> Jan Klapetek. Všechna práva vyhrazena.</p>
+        </footer>
+    </div>
 </body>
 </html>
