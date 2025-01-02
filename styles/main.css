@@ -1,3 +1,63 @@
+/* Styling vzdělání sekce */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.skills-grid div {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-grid h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skills-grid p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Styling pro certifikát */
+.certificate-box {
+    text-align: center;
+}
+
+.certificate-box img {
+    max-width: 90%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+}
+
+.certificate-text {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Základní styly */
 body {
     font-family: 'Roboto', Arial, sans-serif;
@@ -28,7 +88,7 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
+/* Logo JK */
 header .logo {
     display: flex;
     align-items: center;
