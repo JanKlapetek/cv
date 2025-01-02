@@ -5,32 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jan Klapetek</title>
-    <link rel="stylesheet" href="{% static 'styles/main.css %}">
-    <script src="{% static 'cv/script.js' %}" defer></script>
+    <!-- Hlavní CSS -->
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <!-- Externí knihovny -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Hlavní JavaScript -->
+    <script src="{% static 'scripts/main.js' %}" defer></script>
 </head>
 <body>
     <div class="container">
+        <!-- Hlavička stránky -->
         <header>
             <h1 class="animate__animated animate__flipInX">Jan Klapetek</h1>
             <nav>
                 <ul>
                     <li><a href="/">Domů</a></li>
                     <li><a href="{% url 'about' %}">O mně</a></li>
-                    <li><a href="#/projects/">Projekty</a></li>
+                    <li><a href="{% url 'projects' %}">Projekty</a></li>
                     <li><a href="{% url 'hearthstone' %}">Hearthstone</a></li>
                     <li><a href="/admin">Admin</a></li>
-                    <li><a href="https://github.com/JanKlapetek?tab=repositories">Repositories GitHub</a></li>
-                    <li><a href="{% url 'kontakt' %}">Kontakt</a></li>
+                    <li><a href="https://github.com/JanKlapetek?tab=repositories" target="_blank">GitHub</a></li>
+                    <li><a href="{% url 'contact' %}">Kontakt</a></li>
                 </ul>
+                <!-- Tlačítko pro přepínání tmavého režimu -->
                 <button id="darkModeToggle">🌙</button>
             </nav>
         </header>
-        
+
+        <!-- Hlavní obsah stránky -->
         {% block content %}
-        <!-- Zde se bude načítat obsah z rozšiřujících šablon -->
+        <!-- Dynamický obsah podle rozšiřujících šablon -->
         {% endblock %}
 
+        <!-- Patička stránky -->
         <footer>
             <p>&copy; <span id="current-year"></span> Jan Klapetek. Všechna práva vyhrazena.</p>
         </footer>
