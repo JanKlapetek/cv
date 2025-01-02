@@ -10,9 +10,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- Hlavička -->
         <header>
-            <div id="particles-header"></div>
+            <div id="particles-js"></div>
             <div class="logo">
                 <img src="images/logo.png" alt="Logo Jan Klapetek">
             </div>
@@ -38,24 +37,13 @@
 
         <!-- Patička -->
         <footer>
-            <div id="particles-footer"></div>
+            <div id="particles-js"></div>
             <p>&copy; <span id="current-year"></span> Jan Klapetek. Všechna práva vyhrazena.</p>
         </footer>
     </div>
 
     <!-- Skripty -->
     <script src="scripts/particles.min.js"></script> <!-- Přidává particles.js -->
-    <script>
-        // Inicializace particles.js pro hlavičku
-        particlesJS.load('particles-header', 'scripts/particles.json', function() {
-            console.log('Particles.js pro hlavičku načteny.');
-        });
-
-        // Inicializace particles.js pro patičku
-        particlesJS.load('particles-footer', 'scripts/particles.json', function() {
-            console.log('Particles.js pro patičku načteny.');
-        });
-    </script>
     <script src="scripts/main.js" defer></script> <!-- Tvůj hlavní JS -->
 </body>
 </html>
