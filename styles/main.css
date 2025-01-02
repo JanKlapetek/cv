@@ -40,7 +40,7 @@ header .logo img {
     width: 50px;
     border-radius: 50%;
     background: #fff;
-    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
@@ -60,10 +60,6 @@ header nav ul {
     gap: 20px;
 }
 
-header nav ul li {
-    margin: 0;
-}
-
 header nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -80,7 +76,11 @@ header nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Nadpisy */
+/* Hlavní obsah */
+main {
+    padding: 20px;
+}
+
 main h1 {
     text-align: center;
     font-size: 2.5rem;
@@ -89,27 +89,24 @@ main h1 {
     letter-spacing: 2px;
 }
 
-/* Tlačítko tmavého režimu */
-#darkModeToggle {
-    background: #3498DB;
-    border: none;
-    color: #fff;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-left: 20px;
-    border-radius: 50%;
-    padding: 8px;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-#darkModeToggle:hover {
-    transform: rotate(20deg);
-    background-color: #1ABC9C;
-}
-
-/* Hlavní obsah */
-main {
+/* Hero sekce */
+.hero {
+    background-color: #64ff6c;
     padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
 }
 
 /* Patička */
@@ -136,126 +133,6 @@ footer {
         font-size: 1.8rem;
     }
 }
-
-/* Theme Switcher - Tlačítko */
-.theme-switcher {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.theme-switcher button {
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.theme-switcher button:hover {
-    transform: scale(1.1);
-}
-
-.theme-switcher i {
-    font-size: 24px;
-    color: #ffffff;
-    transition: transform 0.3s, color 0.3s;
-}
-
-body.dark-mode .theme-switcher button {
-    background-color: #444444;
-}
-
-
-/* Logo JK */
-header .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-header .logo img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Hero sekce */
-.hero {
-    background-color: #64ff6c;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.hero h2 {
-    margin: 0;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-
-/* Styling vzdělání sekce */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    align-items: center;
-    text-align: center;
-}
-
-.skills-grid div {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.skills-grid h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.skills-grid p {
-    font-size: 0.95rem;
-    color: #555;
-}
-
-/* Styling pro certifikát */
-.certificate-box {
-    text-align: center;
-}
-
-.certificate-box img {
-    max-width: 90%;
-    height: auto;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    margin-top: 10px;
-}
-
-.certificate-text {
-    font-size: 0.85rem;
-    color: #777;
-    margin-top: 10px;
-}
-
 
 /* Styly pro kontaktní informace */
 .contact-info {
@@ -295,7 +172,6 @@ header .logo img {
 .contact-info a:hover img {
     filter: brightness(0.8);
 }
-
 
 /* Tmavý režim */
 body.dark-mode {
