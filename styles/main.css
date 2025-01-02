@@ -194,44 +194,50 @@ header .logo img {
     font-size: 1.2rem;
 }
 
-/* Grid pro dovednosti */
+
+/* Styling vzdělání sekce */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    margin-top: 20px;
+    align-items: center;
+    text-align: center;
 }
 
 .skills-grid div {
-    background-color: #fff;
-    padding: 15px;
+    background-color: #f9f9f9;
     border-radius: 10px;
+    padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 .skills-grid h4 {
-    margin: 10px 0;
     font-size: 1.2rem;
-    color: #64ff6c;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-/* Certifikat */
-.certifikat {
+.skills-grid p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Styling pro certifikát */
+.certificate-box {
     text-align: center;
-    margin: 20px 0;
 }
 
-.certifikat img {
-    max-width: 80%;
+.certificate-box img {
+    max-width: 90%;
     height: auto;
     border: 2px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
 }
 
-.certifikat-text {
+.certificate-text {
+    font-size: 0.85rem;
+    color: #777;
     margin-top: 10px;
-    font-size: 0.9rem;
-    color: #555;
 }
