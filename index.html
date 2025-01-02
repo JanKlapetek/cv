@@ -1,43 +1,38 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jan Klapetek</title>
-    <!-- Hlavní CSS -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- Externí knihovny -->
+    <script src="scripts/main.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Hlavní JavaScript -->
-    <script src="{% static 'scripts/main.js' %}" defer></script>
 </head>
 <body>
     <div class="container">
-        <!-- Hlavička stránky -->
         <header>
             <h1 class="animate__animated animate__flipInX">Jan Klapetek</h1>
             <nav>
                 <ul>
-                    <li><a href="/">Domů</a></li>
-                    <li><a href="{% url 'about' %}">O mně</a></li>
-                    <li><a href="{% url 'projects' %}">Projekty</a></li>
-                    <li><a href="{% url 'hearthstone' %}">Hearthstone</a></li>
-                    <li><a href="/admin">Admin</a></li>
-                    <li><a href="https://github.com/JanKlapetek?tab=repositories" target="_blank">GitHub</a></li>
-                    <li><a href="{% url 'contact' %}">Kontakt</a></li>
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="about.html">O mně</a></li>
+                    <li><a href="projects.html">Projekty</a></li>
+                    <li><a href="hearthstone.html">Hearthstone</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="https://github.com/JanKlapetek?tab=repositories">Repositories GitHub</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
-                <!-- Tlačítko pro přepínání tmavého režimu -->
                 <button id="darkModeToggle">🌙</button>
             </nav>
         </header>
 
-        <!-- Hlavní obsah stránky -->
-        {% block content %}
-        <!-- Dynamický obsah podle rozšiřujících šablon -->
-        {% endblock %}
+        <!-- Obsah stránky -->
+        <main>
+            <h2>Vítejte na mých stránkách!</h2>
+            <p>Toto je úvodní stránka prezentace.</p>
+        </main>
 
-        <!-- Patička stránky -->
+        <!-- Patička -->
         <footer>
             <p>&copy; <span id="current-year"></span> Jan Klapetek. Všechna práva vyhrazena.</p>
         </footer>
