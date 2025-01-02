@@ -41,25 +41,25 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const darkModeToggle = document.getElementById("darkModeToggle");
+    const themeToggle = document.getElementById("themeToggle");
     const body = document.body;
-    const icon = darkModeToggle.querySelector("i");
 
     // Načti režim z LocalStorage
     if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark-mode");
-        icon.classList.replace("fa-moon", "fa-sun");
+        themeToggle.textContent = "Světlý režim";
     }
 
     // Přepínání režimu
-    darkModeToggle.addEventListener("click", () => {
+    themeToggle.addEventListener("click", (event) => {
+        event.preventDefault(); // Zabraň načtení stránky
         body.classList.toggle("dark-mode");
 
         if (body.classList.contains("dark-mode")) {
-            icon.classList.replace("fa-moon", "fa-sun");
+            themeToggle.textContent = "Světlý režim";
             localStorage.setItem("theme", "dark");
         } else {
-            icon.classList.replace("fa-sun", "fa-moon");
+            themeToggle.textContent = "Tmavý režim";
             localStorage.setItem("theme", "light");
         }
     });

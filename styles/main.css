@@ -295,3 +295,18 @@ header .logo img {
 .contact-info a:hover img {
     filter: brightness(0.8);
 }
+
+
+/* Tmavý režim */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode a {
+    color: #a8d0e6;
+}
+
+body.dark-mode nav ul li a.active {
+    color: #ffffff;
+}
