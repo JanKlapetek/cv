@@ -159,3 +159,17 @@ body.dark-mode header nav ul li a:hover {
     background-color: #4caf50;
     color: #fff;
 }
+
+/* Logo JK */
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
