@@ -241,5 +241,6 @@ body.dark-mode nav ul li a.active {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1; /* Částice za textem */
+    z-index: -1; /* Částice budou za textem */
+    background: #2C3E50; /* Základní barva pozadí pro případ, že částice nenaběhnou */
 }

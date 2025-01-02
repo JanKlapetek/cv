@@ -65,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
 particlesJS.load('particles-js', 'scripts/particles.json', function() {
-    console.log('particles.js loaded');
+    console.log('particles.js loaded successfully');
 });
