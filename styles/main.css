@@ -137,28 +137,43 @@ footer {
     }
 }
 
-/* Tmavý režim */
+/* Theme Switcher */
+.theme-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.theme-switcher button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text-color);
+    transition: transform 0.3s, color 0.3s;
+}
+
+.theme-switcher button:hover {
+    transform: scale(1.2);
+}
+
+.theme-switcher .fas {
+    transition: color 0.3s;
+}
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #007BFF;
+}
+
 body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+    --background-color: #222222;
+    --text-color: #ffffff;
+    --primary-color: #00A4FF;
 }
 
-body.dark-mode header {
-    background: #1e1e1e;
-}
-
-body.dark-mode footer {
-    background: #1e1e1e;
-}
-
-body.dark-mode header nav ul li a {
-    color: #e0e0e0;
-}
-
-body.dark-mode header nav ul li a:hover {
-    background-color: #4caf50;
-    color: #fff;
-}
 
 /* Logo JK */
 header .logo {
