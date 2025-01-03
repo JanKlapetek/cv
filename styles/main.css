@@ -76,18 +76,19 @@ header {
     justify-content: space-between;
 }
 /* Logo JK */
-header .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo img {
+    height: 150px; /* Zvýšení velikosti loga */
+    width: auto;   /* Zachování proporcí */
+    border-radius: 10px; /* Jemné zaoblení */
+    background: #fff;    /* Volitelné pozadí */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Efekt stínu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-header .logo img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+/* Efekt při hoveru loga*/
+.logo img:hover {
+    transform: scale(1.1); /* Zvětšení loga při hoveru */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
