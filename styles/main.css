@@ -309,3 +309,24 @@ nav#mobileMenu {
         animation: slideIn 0.3s ease-in-out;
     }
 }
+
+/* Styl pro hamburger menu */
+.hamburger {
+    display: none; /* Výchozí stav pro desktop */
+    cursor: pointer;
+    font-size: 24px; /* Velikost ikony */
+    background: none;
+    border: none;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000; /* Aby bylo vždy nad ostatními prvky */
+}
+
+/* Pro mobilní zařízení */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Zviditelnění hamburger menu */
+    }
+}

@@ -73,7 +73,11 @@ particlesJS.load('particles-js', 'scripts/particles.json', function() {
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 
-// Přepínání zobrazení menu
-menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger-menu');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active'); // Přepne třídu active
+    });
 });
