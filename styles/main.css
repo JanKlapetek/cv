@@ -80,7 +80,6 @@ header {
     height: 150px; /* Zvýšení velikosti loga */
     width: auto;   /* Zachování proporcí */
     border-radius: 10px; /* Jemné zaoblení */
-    background: #fff;    /* Volitelné pozadí */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Efekt stínu */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
