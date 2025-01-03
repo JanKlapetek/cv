@@ -281,26 +281,31 @@ nav#mobileMenu ul li a {
     cursor: pointer;
 }
 
-/* Pro mobilní zařízení */
+/* Výchozí stav navigace (pro desktop) */
+nav#mobileMenu {
+    display: flex; /* Flexbox zajistí horizontální zarovnání */
+    justify-content: center;
+    gap: 20px;
+    position: static; /* Zruší absolutní pozici */
+    background-color: transparent; /* Transparentní pozadí */
+    box-shadow: none; /* Bez stínu */
+}
+
+/* Mobilní zařízení */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
+    nav#mobileMenu {
+        display: none; /* Skryjeme menu */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #2C3E50; /* Barevné pozadí */
+        width: 100%; /* Zabere celou šířku obrazovky */
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Přidáme stín */
     }
 
     nav#mobileMenu.active {
-        display: block;
+        display: block; /* Zobrazí menu při kliknutí */
         animation: slideIn 0.3s ease-in-out;
-    }
-}
-
-/* Animace zobrazení menu */
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
     }
 }
