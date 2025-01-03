@@ -68,3 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
 particlesJS.load('particles-js', 'scripts/particles.json', function() {
     console.log('particles.js loaded successfully');
 });
+
+// Výběr prvků
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Přepínání zobrazení menu
+menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+});

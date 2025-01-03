@@ -242,3 +242,65 @@ body.dark-mode nav ul li a.active {
     z-index: -1; /* Částice budou za textem */
     background: #2C3E50; /* Základní barva pozadí pro případ, že částice nenaběhnou */
 }
+
+
+/* Skrytí menu na mobilních zařízeních */
+nav#mobileMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #2C3E50;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav#mobileMenu ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav#mobileMenu ul li {
+    margin: 10px 0;
+}
+
+nav#mobileMenu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Styl pro hamburger menu */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Pro mobilní zařízení */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav#mobileMenu.active {
+        display: block;
+        animation: slideIn 0.3s ease-in-out;
+    }
+}
+
+/* Animace zobrazení menu */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
