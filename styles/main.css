@@ -87,7 +87,7 @@ header {
 /* Efekt při hoveru loga*/
 .logo img:hover {
     transform: scale(1.1); /* Zvětšení loga při hoveru */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
