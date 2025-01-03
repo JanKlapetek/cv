@@ -80,14 +80,12 @@ header {
     height: 150px; /* Zvýšení velikosti loga */
     width: auto;   /* Zachování proporcí */
     border-radius: 10px; /* Jemné zaoblení */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Efekt stínu */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Efekt při hoveru loga*/
 .logo img:hover {
     transform: scale(1.1); /* Zvětšení loga při hoveru */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
